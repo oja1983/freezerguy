@@ -1,1 +1,331 @@
-# freezerguy
+# freezerguy<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Freezer Guy - Self-Organizing Kitchens That Run Themselves</title>
+    <meta name="description" content="I'm José, The Freezer Guy. I build kitchens that organize themselves so you can focus on cooking, not chaos. Download my free guide.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .hero .tagline {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .lead-capture {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .lead-capture h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .lead-capture p {
+            color: #555;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1em;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 20px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .service-card h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .service-card .duration {
+            color: #764ba2;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .service-card p {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .service-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+        
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .cta-section {
+            background: white;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .cta-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        
+        .cta-section p {
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .hero .tagline {
+                font-size: 1em;
+            }
+            
+            .lead-capture {
+                padding: 30px 20px;
+            }
+            
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>🧊 I'm José, The Freezer Guy</h1>
+            <p class="subtitle">I Build Kitchens That Organize Themselves</p>
+            <p class="tagline">So You Can Focus on Cooking, Not Chaos</p>
+        </div>
+        
+        <!-- Lead Capture -->
+        <div class="lead-capture">
+            <h2>Download My Free Guide</h2>
+            <p><strong>The Invisible Hand:</strong> How I Turned a Broken Freezer into a Self-Organizing Kitchen (And How You Can Do It in Any Restaurant)</p>
+            
+            <form action="#" method="post" id="lead-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <button type="submit" class="btn">Get The Free Guide</button>
+            </form>
+            
+            <p style="margin-top: 20px; font-size: 0.9em; color: #888;">No spam. Just the guide and occasional tips on building self-organizing kitchens.</p>
+        </div>
+        
+        <!-- Services Section -->
+        <div class="services">
+            <div class="service-card">
+                <h3>The Freezer Fix</h3>
+                <p class="duration">1-Day Engagement</p>
+                <p>I walk into your walk-in and rebuild it from scratch using The Invisible Hand Method. Your crew will never waste time searching for product again.</p>
+                <ul>
+                    <li>Complete freezer/cooler audit</li>
+                    <li>Custom layout design</li>
+                    <li>On-site implementation</li>
+                    <li>Photo documentation</li>
+                    <li>Simple SOPs for your team</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>Kitchen Flow Audit</h3>
+                <p class="duration">2-Day Engagement</p>
+                <p>The full kitchen experience. I analyze your entire back-of-house operation and redesign the flow so everything moves with you, not against you.</p>
+                <ul>
+                    <li>Complete operational audit</li>
+                    <li>Storage + prep line optimization</li>
+                    <li>Dish pit reorganization</li>
+                    <li>Full layout blueprints</li>
+                    <li>Training manual for your team</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>Team Alignment</h3>
+                <p class="duration">3-Day Engagement</p>
+                <p>The Kitchen Flow Audit plus hands-on training. I work with your managers and crew to make sure the new system sticks and becomes second nature.</p>
+                <ul>
+                    <li>Everything in Kitchen Flow Audit</li>
+                    <li>On-site manager training</li>
+                    <li>Crew walkthroughs</li>
+                    <li>30-day follow-up support</li>
+                    <li>System refinement</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Ready to Build a Kitchen That Works?</h2>
+            <p>Let's talk about what's slowing you down and how The Invisible Hand Method can fix it.</p>
+            <a href="https://facebook.com/ExactMarkLineStriping" class="contact-btn">Get In Touch</a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>The Freezer Guy</strong> | © 2025 José Ortiz</p>
+            <p>Self-Organizing Kitchens That Run Themselves</p>
+        </div>
+    </div>
+    
+    <script>
+        // Basic form handler - you'll need to connect this to your email service
+        document.getElementById('lead-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submission needs to be connected to your email service (like ConvertKit, Mailchimp, or a simple Google Form). For now, collect emails manually or use a service.');
+            // In production, this would send to your email service API
+        });
+    </script>
+</body>
+</html>
